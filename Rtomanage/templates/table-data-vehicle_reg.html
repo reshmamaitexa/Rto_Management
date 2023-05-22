@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
+    <!-- Twitter meta-->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:site" content="@pratikborsadiya">
+    <meta property="twitter:creator" content="@pratikborsadiya">
+    <!-- Open Graph Meta-->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Vali Admin">
+    <meta property="og:title" content="Vali - Free Bootstrap 4 admin theme">
+    <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
+    <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
+    <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
+    <title>Admin Page</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body class="app sidebar-mini">
+    <!-- Navbar-->
+    <header class="app-header"><a class="app-header__logo" href="index.html"></a>
+      <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
+      <!-- Navbar Right Menu-->
+      <ul class="app-nav">
+        
+        <!-- User Menu-->
+        <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></a>
+          <ul class="dropdown-menu settings-menu dropdown-menu-right">
+            <li><a class="dropdown-item" href="page-login.html"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <!-- Sidebar menu-->
+    <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+    <aside class="app-sidebar">
+        <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
+          <div>
+            <p class="app-sidebar__user-name">Admin Page</p>
+          </div>
+        </div>
+        <ul class="app-menu">
+          </li>
+          <li class="treeview "><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Manage</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+                <li><a class="treeview-item " href="{% url 'getusers' %}"><i class="icon fa fa-circle-o"></i>Users</a></li>
+              <li><a class="treeview-item " href="{% url 'managelearnerslicense' %}"><i class="icon fa fa-circle-o"></i> Learners Licence</a></li>
+              <li><a class="treeview-item " href="{% url 'managelicense' %}"><i class="icon fa fa-circle-o"></i> Licence</a></li>
+              <li><a class="treeview-item " href="{% url 'managerenewlicense' %}"><i class="icon fa fa-circle-o"></i> Renew Licence</a></li>
+              <li><a class="treeview-item " href="{% url 'manageduplicatelicense' %}"><i class="icon fa fa-circle-o"></i> Duplicate Licence</a></li>
+              <li><a class="treeview-item " href="{% url 'managehazmate' %}"><i class="icon fa fa-circle-o"></i>Endorsement for Hazmate</a></li>
+              <li><a class="treeview-item " href="{% url 'manageinternationallicense' %}"><i class="icon fa fa-circle-o"></i>International Licence</a></li>
+              <li><a class="treeview-item " href="{% url 'managepsvBadge' %}"><i class="icon fa fa-circle-o"></i> PSV Badge</a></li>
+              <li><a class="treeview-item " href="{% url 'managenoc' %}"><i class="icon fa fa-circle-o"></i> NOC</a></li>
+              <li><a class="treeview-item " href="{% url 'managenoccancellation' %}"><i class="icon fa fa-circle-o"></i> NOC Cancellation</a></li>
+              <li><a class="treeview-item " href="{% url 'newvehicleregister' %}"><i class="icon fa fa-circle-o"></i> New Vehicle Registration</a></li>
+              <li><a class="treeview-item " href="{% url 'Addadhardetails' %}"><i class="icon fa fa-circle-o"></i>Add Adhar Details</a></li>
+              <li><a class="treeview-item " href="{% url 'Viewadhardetails' %}"><i class="icon fa fa-circle-o"></i>View Adhar Details</a></li>
+              <li><a class="treeview-item " href="{% url 'vehicleownershipstatus' %}"><i class="icon fa fa-circle-o"></i> Vehicle Ownership Transfer </a></li>
+              <!-- <li><a class="treeview-item " href="{% url 'updatelicensedata' %}"><i class="icon fa fa-circle-o"></i> Update  Driving Licence Data</a></li> -->
+   </ul>
+          </li>
+          <!-- <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Add</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+              <li><a class="treeview-item active" href="{% url 'viewtestdate' %}"><i class="icon fa fa-circle-o"></i> Test Date</a></li>
+            </ul>
+          </li> -->
+          <li class="treeview "><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">View</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+              <li><a class="treeview-item active" href="{% url 'viewpayment' %}"><i class="icon fa fa-circle-o"></i> Payment</a></li>
+              <li><a class="treeview-item active" href="{% url 'viewreport' %}"><i class="icon fa fa-circle-o"></i> Report</a></li>
+     </ul>
+          </li>
+          <!-- <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-file-text"></i><span class="app-menu__label">Pages</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+              <li><a class="treeview-item" href="blank-page.html"><i class="icon fa fa-circle-o"></i> Blank Page</a></li>
+              <li><a class="treeview-item" href="page-login.html"><i class="icon fa fa-circle-o"></i> Login Page</a></li>
+              <li><a class="treeview-item" href="page-lockscreen.html"><i class="icon fa fa-circle-o"></i> Lockscreen Page</a></li>
+              <li><a class="treeview-item" href="page-user.html"><i class="icon fa fa-circle-o"></i> User Page</a></li>
+              <li><a class="treeview-item" href="page-invoice.html"><i class="icon fa fa-circle-o"></i> Invoice Page</a></li>
+              <li><a class="treeview-item" href="page-calendar.html"><i class="icon fa fa-circle-o"></i> Calendar Page</a></li>
+              <li><a class="treeview-item" href="page-mailbox.html"><i class="icon fa fa-circle-o"></i> Mailbox</a></li>
+              <li><a class="treeview-item" href="page-error.html"><i class="icon fa fa-circle-o"></i> Error Page</a></li>
+            </ul>
+          </li> -->
+        </ul>
+      </aside>
+    <main class="app-content">
+      <div class="app-title">
+        <div>
+          <h1><i class="fa fa-th-list"></i>Manage</h1>
+          <p>New vehicle Registration</p>
+        </div>
+        <!-- <ul class="app-breadcrumb breadcrumb">
+          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+           </ul> -->
+      </div>
+      <div class="row">
+        <div class="col-md-18">
+          <div class="tile">
+            <h3 class="tile-title">New vehicle Registration</h3>
+            <table class="table">
+              <thead>
+                <tr>
+                 
+                  <th>Owner Name</th>
+                  <th>S/d/w of</th>
+                  <th>House name</th>
+                  <th> Post</th>
+                  <th> Pin</th>
+                  <th> City</th>
+                  <th>Ownership type</th>
+                  <th>Phone number</th>
+                  <th> Class of vehicle</th>
+                  <th> Motor vehicle type</th>
+                  <th> Type of body</th>
+                  <th>Type of vehicle</th>
+                  <th> Date of manufacture</th>
+                  <th> Horse power</th>
+                  <th> Cubic capacity</th>
+                  <th> Seating capacity</th>
+                  <th> Fuel used in engine</th>
+                  <th> Engine no</th>
+                  <th> Colour</th>
+                  <th> Photo</th>
+                  <th>Accept</th>
+                  <th>Reject</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for i in data %}
+                <tr>
+                  <td>{{i.Owner_Name}}</td>
+                  <td>{{i.SDW}}</td>
+                  <td>{{i.House_name}}</td>
+                  <td>{{i.Post}} </td>
+                  <td>{{i.Pin}}</td>
+                  <td>{{i.City}}</td>
+                  <td>{{i.Ownership_type}}</td>
+                  <td>{{i.Mobile}}</td>
+                   <td>{{i.Class_of_vehicle}}</td>  
+                   <td>{{i.Motor_vehicle_type}}</td> 
+                   <td>{{i.Type_of_body}}</td> 
+                   <td>{{i.Type_of_vehicle}}</td> 
+                   <td>{{i.Date_of_manufacture}}</td>
+                   <td>{{i.Horse_power}}</td>
+                   <td>{{i.Cubic_capacity}}</td>
+                    <td>{{i.Seating_capacity}}</td>  
+                    <td>{{i.Fuel_used_in_engine}}</td> 
+                    <td>{{i.Engine_no}}</td> 
+                    <td>{{i.Color}}</td> 
+                    <td><img src="/media/{{i.Vehi_photo}}" width="100px" height="100px"/></td> 
+                    {% if i.vehi_reg_status == '0'%}
+                    <td><button ><a href="{% url 'approvevehicleregister' i.id %}">Accept</a></button>
+                        </td>
+                    <td>
+                        <form method="post" action="{% url 'rejectvehicleRegWithReason' i.id %}">
+                            {% csrf_token %}
+                            <input type="text" placeholder="reason for rejection" name="rejected_reason"/><br><br>
+                        <!-- <button ><a href="{% url 'rejectlearners' i.id %}">Reject</a></button> -->
+                        <input type="submit" value="Reject"/>
+                    </form>
+                        <!-- <button ><a href="{% url 'rejectrenewlicence' i.id %}">Reject</a></button> -->
+                    </td>
+                  </tr>
+                  {% endif %}
+                  {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+  
+        
+        
+      </div>
+       
+    </main>
+    <!-- Essential javascripts for application to work-->
+    <script src="../static/js/jquery-3.3.1.min.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/main.js"></script>
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="../static/js/plugins/pace.min.js"></script>
+    <!-- Page specific javascripts-->
+    <script type="text/javascript" src="../static/js/plugins/chart.js"></script>
+   
+    <!-- Google analytics script-->
+   
+  </body>
+</html>
